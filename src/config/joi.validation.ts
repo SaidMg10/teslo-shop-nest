@@ -9,4 +9,5 @@ export const JoiValidationSchema = Joi.object({
   PORT: Joi.number().default(3000),
   NODE_ENV: Joi.string().valid('dev', 'prod', 'test').default('dev'),
   HOST_API: Joi.string().uri().default('http://localhost:3000/api'),
+  JWT_SECRET: Joi.string().required(),
 });
